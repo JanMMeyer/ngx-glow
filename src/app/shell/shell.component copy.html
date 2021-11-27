@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+	<ng-content select="[headtoolbar]"></ng-content>
+</mat-toolbar>
+<mat-sidenav-container class="sidenav-container">
+	<!--<mat-sidenav #drawer class="sidenav" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+		[mode]="(isHandset$ | async) ? 'over' : 'side'" [fixedInViewport]="false" [opened]="(isHandset$ | async) === false"> -->
+	<mat-sidenav #drawer class="sidenav" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+		[mode]="(isHandset$ | async) ? 'over' : 'side'" [fixedInViewport]="false" [opened]="true">
+		<!-- <ng-content select="[sidenav]"></ng-content>
+		<app-navigation sidenav></app-navigation> -->
+		<mat-toolbar>Menu</mat-toolbar>
+		<mat-nav-list>
+			<a mat-list-item href="#">Link 1</a>
+			<a mat-list-item href="#">Link 2</a>
+			<a mat-list-item href="#">Link 3</a>
+		</mat-nav-list>
+
+	</mat-sidenav>
+	<mat-sidenav-content>
+		<!-- <ng-content></ng-content> -->
+	</mat-sidenav-content>
+</mat-sidenav-container>

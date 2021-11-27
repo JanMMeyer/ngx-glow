@@ -1,7 +1,15 @@
-<mat-toolbar color="primary">
-  <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
-    *ngIf="isHandset$ | async">
-    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-  </button>
-  <span>ngx-glow</span>
-</mat-toolbar>
+<mat-card>
+	<mat-toolbar>
+		<mat-toolbar-row>
+			<button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="onToggleSideNavDrawer()"
+				*ngIf="isHandset$ | async">
+				<mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+			</button>
+			<mat-icon class="icon">home</mat-icon>
+			<span class="spacer"></span>
+			<span>ngx-glow</span>
+			<span class="spacer"></span>
+			<mat-icon class="icon">settings</mat-icon>
+		</mat-toolbar-row>
+	</mat-toolbar>
+</mat-card>

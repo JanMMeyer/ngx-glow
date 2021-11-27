@@ -1,17 +1,12 @@
-.sidenav-container {
-  height: 100%;
+:host {
+	display: flex;
+	flex-direction: column;
+	mat-card {
+		flex: 1 1 auto;
+		// margin: 16px 8px 16px 16px;
+
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
-.sidenav {
-  width: 200px;
-}
-
-.sidenav .mat-toolbar {
-  background: inherit;
-}
-
-.mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}

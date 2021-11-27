@@ -1,0 +1,17 @@
+@use '../../../styles.scss' as style;
+mat-card {
+	padding: 0;
+	mat-toolbar {
+		border-radius: inherit;
+		border-color: style.$primary style.$primary style.$accent ;
+		border-style:none none solid;
+		background-color: transparent;
+	}
+}
+
+.icon {
+  padding: 0 14px;
+}
+.spacer {
+  flex: 1 1 auto;
+}

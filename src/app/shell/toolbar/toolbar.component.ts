@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
+import { Component } from '@angular/core'
+import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout'
+import { Observable } from 'rxjs'
+import { map, shareReplay } from 'rxjs/operators'
+import { ShellService } from '../shell.service'
 
 @Component({
 	selector: 'app-toolbar',
@@ -10,11 +11,18 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class ToolbarComponent {
 
-	isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+	public isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
 		.pipe(
-			map(result => result.matches),
+			map((result: BreakpointState) => result.matches),
 			shareReplay()
-		);
+		)
 
-	constructor(private breakpointObserver: BreakpointObserver) { }
+	public constructor(
+		private breakpointObserver: BreakpointObserver,
+		private shellService: ShellService
+	) { }
+
+	public onToggleSideNavDrawer(): void {
+		this.shellService.toggleSideNavDrawer()
+	}
 }
