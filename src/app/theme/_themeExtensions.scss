@@ -1,0 +1,10 @@
+@use './extensions/shell' as shell;
+@use './extensions/toolbar' as toolbar;
+@use './extensions/scrollBar' as scrollbar;
+
+@mixin extend($theme) {
+	@include shell.extend($theme);
+	@include toolbar.extend($theme);
+	@include scrollbar.extend($theme);
+}
+

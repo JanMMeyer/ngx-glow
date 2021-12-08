@@ -1,0 +1,22 @@
+// @mixin extend($theme) {
+// 	$primary: map-get($theme, primary, default);
+// 	$primary-darker: map-get($theme, primary, darker);
+// 	$primary-lighter: map-get($theme, primary, lighter);
+// 	$accent: map-get($theme, accent, default);
+// 	$accent-darker: map-get($theme, accent, darker);
+// 	$accent-lighter: map-get($theme, accent, lighter);
+// 	$warn: map-get($theme, warn);
+// 	$background: map-get($theme, background, background);
+// 	$foreground: map-get($theme, foreground, base);
+// }
+
+@function primary($theme) { @return map-get($theme, primary, default); };
+@function primary-darker($theme) { @return map-get($theme, primary, darker); };
+@function primary-lighter($theme) { @return map-get($theme, primary, lighter); };
+@function accent($theme) { @return map-get($theme, accent, default); };
+@function accent-darker($theme) { @return map-get($theme, accent, darker); };
+@function accent-lighter($theme) { @return map-get($theme, accent, lighter); };
+@function warn($theme) { @return map-get($theme, warn); };
+@function foreground($theme) { @return map-get($theme, foreground, base); };
+@function background($theme) { @return map-get($theme, background, background); };
+@function background-faded($theme) { @return fade-out(background($theme),0.2); };

@@ -1,18 +1,18 @@
 <div class="shell-container">
 	<div class="grid-container">
-		<mat-card class="header">
+		<mat-card [class]="(shellService.showHeader$ | async) ? 'header mat-elevation-z4' :  'display-none'">
 			<ng-content select="[header]"></ng-content>
 		</mat-card>
-		<mat-card class="left">
+		<mat-card [class]="(shellService.showLeft$ | async) ? 'left mat-elevation-z4' :  'display-none'">
 			<ng-content select="[left]"></ng-content>
 		</mat-card>
-		<mat-card class="main">
+		<mat-card [class]="(shellService.showMain$ | async) ? 'main mat-elevation-z4' :  'display-none'">
 			<ng-content select="[main]"></ng-content>
 		</mat-card>
-		<mat-card class="right">
+		<mat-card [class]="(shellService.showRight$ | async) ? 'right' :  'display-none'">
 			<ng-content select="[right]"></ng-content>
 		</mat-card>
-		<mat-card class="footer">
+		<mat-card [class]="(shellService.showFooter$ | async) ? 'footer' :  'display-none'">
 			<ng-content select="[footer]"></ng-content>
 		</mat-card>
 	</div>

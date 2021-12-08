@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/l
 import { Observable } from 'rxjs'
 import { map, shareReplay } from 'rxjs/operators'
 import { ShellService } from '../shell.service'
+import { GlowTheme, ThemeService } from 'src/app/theme/theme.service'
 
 @Component({
 	selector: 'app-toolbar',
@@ -19,10 +20,16 @@ export class ToolbarComponent {
 
 	public constructor(
 		private breakpointObserver: BreakpointObserver,
-		private shellService: ShellService
+		private shellService: ShellService,
+		private themeService: ThemeService
 	) { }
 
-	public onToggleSideNavDrawer(): void {
-		this.shellService.toggleSideNavDrawer()
+	public toggleLeftShell(): void {
+		this.shellService.toggleLeftShell()
+	}
+
+	public toggleTheme(): void {
+		const nextTheme: GlowTheme = this.themeService.currentTheme === 'light' ? 'dark' : 'light'
+		this.themeService.setTheme(nextTheme)
 	}
 }

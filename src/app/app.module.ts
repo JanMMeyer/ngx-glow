@@ -19,6 +19,7 @@ import { MatInputModule } from '@angular/material/input'
 import { MatSelectModule } from '@angular/material/select'
 import { MatRadioModule } from '@angular/material/radio'
 import { MatCardModule } from '@angular/material/card'
+import { MatMenuModule } from '@angular/material/menu'
 import { ReactiveFormsModule } from '@angular/forms'
 import { ShellComponent } from './shell/shell.component'
 import { ToolbarComponent } from './shell/toolbar/toolbar.component'
@@ -56,6 +57,7 @@ import { FooterShellItem, HeaderShellItem, LeftShellItem, RightShellItem, MainSh
 		MatSelectModule,
 		MatRadioModule,
 		MatCardModule,
+		MatMenuModule,
 		ReactiveFormsModule
 		// MatSliderModule,
 	],

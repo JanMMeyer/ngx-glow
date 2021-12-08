@@ -1,0 +1,7 @@
+
+@use 'color' as color;
+@mixin extend($theme) {
+	.grid-container > mat-card {
+		background-color: color.background-faded($theme)
+	}
+}

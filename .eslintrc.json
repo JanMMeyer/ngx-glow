@@ -248,23 +248,23 @@
 					// Index signature
 					"signature",
 					// Static Fields
-					"public-static-field",
-					"protected-static-field",
 					"private-static-field",
+					"protected-static-field",
+					"public-static-field",
 					// Static Methods
-					"public-static-method",
-					"protected-static-method",
 					"private-static-method",
+					"protected-static-method",
+					"public-static-method",
 					// Instance Fields
-					"public-abstract-field",
-					"public-decorated-field",
-					"public-instance-field",
-					"protected-abstract-field",
-					"protected-decorated-field",
-					"protected-instance-field",
 					"private-abstract-field",
 					"private-decorated-field",
 					"private-instance-field",
+					"protected-abstract-field",
+					"protected-decorated-field",
+					"protected-instance-field",
+					"public-abstract-field",
+					"public-decorated-field",
+					"public-instance-field",
 					// Constructors
 					"public-constructor",
 					"protected-constructor",

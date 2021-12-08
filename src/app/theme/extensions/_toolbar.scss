@@ -1,0 +1,10 @@
+@use 'color' as color;
+@mixin extend($theme) {
+	mat-toolbar.mat-toolbar {
+		border-radius: inherit;
+		border-color: color.accent($theme);
+		border-style: none none solid;
+		background-color: transparent;
+	}
+}
+

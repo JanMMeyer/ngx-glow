@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
+import { Observable } from 'rxjs'
+import { GlowThemeClass, ThemeService } from './theme/theme.service'
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ngx-glow';
+	public title: string = 'ngx-glow'
+
+	public constructor(private theme: ThemeService) {}
+
+	public get themeClass$(): Observable<string> {
+		return this.theme.currentThemeClass$
+	}
 }

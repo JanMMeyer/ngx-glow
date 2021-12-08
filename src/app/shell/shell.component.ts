@@ -1,14 +1,16 @@
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout'
-import { AfterContentInit, Component, ContentChild, ContentChildren, OnInit } from '@angular/core'
+import { AfterContentInit, ChangeDetectionStrategy, Component, ContentChild, ContentChildren, OnInit } from '@angular/core'
 import { Observable } from 'rxjs'
 import { map, shareReplay } from 'rxjs/operators'
 import { LeftShellItem } from './shell.directive'
+import { ShellService } from './shell.service'
 
 
 @Component({
 	selector: 'app-shell',
 	templateUrl: './shell.component.html',
-	styleUrls: ['./shell.component.scss']
+	styleUrls: ['./shell.component.scss'],
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ShellComponent implements OnInit, AfterContentInit {
 
@@ -18,7 +20,7 @@ export class ShellComponent implements OnInit, AfterContentInit {
 			shareReplay()
 		)
 
-	public constructor(private breakpointObserver: BreakpointObserver) {
+	public constructor(private breakpointObserver: BreakpointObserver, public shellService: ShellService) {
 	}
 
 	public ngOnInit(): void {

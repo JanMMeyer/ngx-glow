@@ -3,12 +3,12 @@
 .shell-container {
 	height: 100vh;
 	width: 100vw;
-	padding: style.$gap-m;
+	padding: style.$gap-l;
 	box-sizing: border-box;
 	// background-color: fade-out(style.$primary-darker, 0.4);
 	// background-color: style.$primary-darker;
 	// background-color: style.$background;
-	background: linear-gradient(style.$primary, style.$accent);
+	background: linear-gradient(135deg, style.$primary, style.$accent);
 
 	&::before {
 		content: "";
@@ -42,9 +42,7 @@
 
 	& > mat-card {
 		padding: style.$gap-s;
-		background-color: style.$background;
 	}
-
 }
 
 
@@ -54,13 +52,19 @@
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
+	margin: 0 0 style.$gap-m 0;
 }
 .left {
   grid-area: left;
 	display: flex;
 	flex-direction: row;
 	align-items: stretch;
+	margin: 0 style.$gap-m 0 0;
 }
+.left.display-none {
+	width: 0;
+}
+
 .main {
   grid-area: main;
 	display: flex;
@@ -74,10 +78,12 @@
 	display: flex;
 	flex-direction: row;
 	align-items: stretch;
+	margin: 0 0 0 style.$gap-m;
 }
 .footer {
   grid-area: footer;
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
+	margin: style.$gap-m 0 0 0;
 }
