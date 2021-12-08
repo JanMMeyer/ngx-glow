@@ -3,9 +3,26 @@ mat-card {
 	padding: 0;
 }
 
-.icon {
-  padding: 0 14px;
+mat-toolbar {
+	.icon {
+		padding: 0 style.$gap-l;;
+	}
+
+	.spacer {
+		flex: 1 1 auto;
+	}
 }
-.spacer {
-  flex: 1 1 auto;
+
+.mat-menu-padder {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: style.$gap-s;
+	.icon {
+		padding: style.$gap-s;
+		color: style.$primary;
+		//font-size: normal;
+	}
 }
+
+

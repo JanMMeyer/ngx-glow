@@ -24,12 +24,20 @@ export class ToolbarComponent {
 		private themeService: ThemeService
 	) { }
 
+	public get useDarkTheme(): boolean {
+		return this.themeService.currentTheme === 'dark'
+	}
+	public set useDarkTheme(useDarkTheme: boolean) {
+		this.themeService.setTheme(useDarkTheme ? 'dark' : 'light')
+	}
+
+
 	public toggleLeftShell(): void {
 		this.shellService.toggleLeftShell()
 	}
 
-	public toggleTheme(): void {
-		const nextTheme: GlowTheme = this.themeService.currentTheme === 'light' ? 'dark' : 'light'
-		this.themeService.setTheme(nextTheme)
-	}
+	// public toggleTheme(useDarkTheme: boolean): void {
+	// 	const nextTheme: GlowTheme = this.themeService.currentTheme === 'light' ? 'dark' : 'light'
+	// 	this.themeService.setTheme(nextTheme)
+	// }
 }

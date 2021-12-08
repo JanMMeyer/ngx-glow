@@ -20,7 +20,8 @@ import { MatSelectModule } from '@angular/material/select'
 import { MatRadioModule } from '@angular/material/radio'
 import { MatCardModule } from '@angular/material/card'
 import { MatMenuModule } from '@angular/material/menu'
-import { ReactiveFormsModule } from '@angular/forms'
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { ShellComponent } from './shell/shell.component'
 import { ToolbarComponent } from './shell/toolbar/toolbar.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
@@ -44,6 +45,8 @@ import { FooterShellItem, HeaderShellItem, LeftShellItem, RightShellItem, MainSh
 		BrowserModule,
 		AppRoutingModule,
 		BrowserAnimationsModule,
+		FormsModule,
+		ReactiveFormsModule,
 		MatTableModule,
 		MatPaginatorModule,
 		MatSortModule,
@@ -58,8 +61,7 @@ import { FooterShellItem, HeaderShellItem, LeftShellItem, RightShellItem, MainSh
 		MatRadioModule,
 		MatCardModule,
 		MatMenuModule,
-		ReactiveFormsModule
-		// MatSliderModule,
+		MatSlideToggleModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
